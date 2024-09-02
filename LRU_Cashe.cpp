@@ -10,7 +10,7 @@ bool LRU_Cashe::calculateValue(int data) {
 void LRU_Cashe::addToCashe(int data, int value) {
 	if (LRU_Cashe::cashe.size() == LRU_Cashe::casheSize) {
 		auto leastRecentDataIt = LRU_Cashe::cashe.begin();
-		int leastRecentDataValue = 999;
+		int leastRecentDataValue = 2147483647;
 		for (auto it = LRU_Cashe::cashe.begin(); it != LRU_Cashe::cashe.end(); it++) {
 			if (it->second.second < leastRecentDataValue) {
 				leastRecentDataValue = it->second.second;
